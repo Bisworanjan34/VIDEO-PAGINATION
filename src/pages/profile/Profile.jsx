@@ -2,9 +2,10 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player'
 import './Profile.css'
+import youtubeAllData from './data'
 
 const Profile = () => {
-  let [data,setData]=useState([])
+  let [data,setData]=useState(youtubeAllData)
   let [curp,setcurp]=useState(1)
   let [rowp,setrowp]=useState(3)
   let indexlast=curp*rowp;
@@ -34,11 +35,14 @@ const Profile = () => {
 let movefun=(page)=>{
   setcurp(page)
 }
+useEffect(()=>{
+  setData(data)
+},[])
 
-  useEffect(()=>{
-    axios.get('http://localhost:3000/youtubeAllData')
-    .then((res)=>{setData(res.data)})
-  },[])
+  // useEffect(()=>{
+  //   axios.get('http://localhost:3000/youtubeAllData')
+  //   .then((res)=>{setData(res.data)})
+  // },[])
   return (
     <div>
       <h3>profile component</h3>

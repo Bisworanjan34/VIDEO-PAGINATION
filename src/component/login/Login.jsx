@@ -48,38 +48,38 @@ const Login = () => {
           <div className="row">
             <div className="col-5 w-50 shadow p-2 mx-auto  text-white" style={{height:'350px'}}>
               <div className="p-3 text-center">
-               <form action="">
-               <ol className=' list-unstyled  d-inline-block' style={{height:'100px'}}>
-                <li className=' '> <input
+               <form action="" onSubmit={loginFun}>
+               <input
                   type="text"
                   placeholder='enter userid'
                   onChange={handleChange}
                   value={loginInput.userid}
                   name='userid'
+                  required
                   className='border p-1 px-4 text-primary '
                 />
                 <p className='text-start ms-2'style={{color:'red',}} >{err.userid}</p>
-               </li>
+              
                
-               <li><input
+               <input
                   type="password"
                   placeholder='enter password'
                   onChange={handleChange}
                   value={loginInput.password}
                   name='password' 
+                  required
                    className=' border p-1 px-4 text-primary my-2 '
                 />
                 <p className='text-start ms-2'style={{color:'red'}}>{err.password}</p>
-                </li>
-               </ol>
+              
+                <button type='submit'>
+                  Log in
+                </button>
                </form>
                 <br />
                 <br />
                <p className='text-dark'>id:bisworanjan</p>
                <p  className='text-dark mb-2'>password:webdeveloper</p>
-                <button onClick={loginFun}>
-                  Log in
-                </button>
                
               </div>
             </div>
