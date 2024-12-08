@@ -44,11 +44,11 @@ useEffect(()=>{
   //   .then((res)=>{setData(res.data)})
   // },[])
   return (
-    <div>
+    <div className='px-6'>
       <h3>profile component</h3>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, commodi. llam dolores animi, harum ut neque praesentium similique omnis debitis saepe modi, autem mollitia.lorem40 Totam in ullam beatae dolores nulla illum veniam doloremque voluptatum. Temporibus, nemo. Incidunt in, consequatur expedita dolorem explicabo esse dolorum eaque vitae et provident!</p>
 
-      <div className="div  d-flex  justify-content-evenly gap-3 flex-wrap bg-body-secondary">
+      <div className="div d-flex  justify-content-evenly gap-3 flex-wrap bg-body-secondary">
           {
             curitem.length > 0 && curitem.map((data,i)=>{
               return(
@@ -61,7 +61,7 @@ useEffect(()=>{
             })
           }
       </div>
-        <div className="video-pagination d-flex justify-content-center gap-3  mt-5">
+        <div className="video-pagination d-flex justify-content-center gap-0 px-2 mt-5">
            <button onClick={prevfun}>prev</button>
             {
               Array.from({length:totalp},(_,index)=>(

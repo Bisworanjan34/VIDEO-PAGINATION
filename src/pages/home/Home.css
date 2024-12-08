@@ -1,0 +1,12 @@
+@media screen and (max-width:630px){
+    .home-cont{
+        flex-direction: column;
+        /* background-color: red; */
+
+    }
+}
+
+.home-cont{
+    display: flex;
+    justify-content: center;
+}

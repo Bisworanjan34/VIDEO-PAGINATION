@@ -46,8 +46,8 @@ const Login = () => {
         <h3 className='text-center'>LOG-IN-Page</h3>
         <div className="container">
           <div className="row">
-            <div className="col-5 w-50 shadow p-2 mx-auto  text-white" style={{height:'350px'}}>
-              <div className="p-3 text-center">
+            <div className="col-5 w-100 shadow p-2 mx-auto  text-white" style={{height:'350px'}}>
+              <div className="p-3 text-center ">
                <form action="" onSubmit={loginFun}>
                <input
                   type="text"
